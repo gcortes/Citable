@@ -1,0 +1,18 @@
+.pointer {
+  cursor: pointer;
+}
+
+.extra-space {
+  padding-left: 10px;
+}
+
+.bibliographic-entry
+{
+    padding: 5px;
+    padding-bottom: 0px;
+    color: black;
+    font-size: smaller;
+    background-color: #FFF5E0;
+    border-radius: 5px;
+    width: 200px;
+}

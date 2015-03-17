@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <title>Footnote Prototype</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="packages/web_components/webcomponents.js"></script>
+  <script src="packages/web_components/dart_support.js"></script>
+</head>
+<body>
+<h1>The Blow Family</h1>
+<p>Joe Blow born <citation bibliographicEntry="1" citationText="12 Apr 1858"></citation></p>
+
+<p>Robin Blow born <citation bibliographicEntry="1" citationText="9 Jan 1852"></citation></p>
+
+<p>This is a long entry to see what happens when the popup hits the right side of the page John Blow born <citation bibliographicEntry="2" citationText="13 Dec 1850"></citation></p>
+
+<p>Some more text.</p>
+
+<div style="visibility: hidden;">
+  <div id="be1">
+    <h2>Citation 1</h2>
+    <p>source specification</p>
+    <p>additional information</p>
+  </div>
+
+  <div id="be2">
+    <h2>Citation 2</h2>
+    <p>source specification</p>
+    <p>additional information</p>
+  </div>
+</div>
+
+<script type="application/dart" src="main.dart"></script>
+<script type="text/javascript" src="packages/browser/dart.js"></script>
+</body>
+</html>
