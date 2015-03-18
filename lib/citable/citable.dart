@@ -36,7 +36,6 @@ class Citable
     if (displayModel.entryRef != null)
     {
       DivElement textSpan = new DivElement()
-          ..appendHtml('<hr>')
           ..appendHtml(htmlText);
       citableElem.append(textSpan);
     }
