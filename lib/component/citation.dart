@@ -1,5 +1,6 @@
 library citation_component;
 
+import 'dart:html';
 import 'package:angular/angular.dart';
 import 'package:citable/citable/citable.dart' show CitableModel;
 
@@ -10,20 +11,25 @@ import 'package:citable/citable/citable.dart' show CitableModel;
 
 class CitationComponent
 {
-  @NgAttr('bibliographicEntry')
-  int bibliographicEntry;
-
-  @NgAttr('citationText')
-  String citationText;
+  @NgAttr('bentry')
+  int bentry;
 
   // Set up the decorator
   static final citable = new Expando<CitableModel>();
+
+  final Element element;
+  String citationText;
+  
+  CitationComponent(this.element)
+  {
+    citationText = element.innerHtml;
+  }
 
   CitableModel citableForCitation()
   {
     if (citable[this] == null)
     {
-      citable[this] = new CitableModel(bibliographicEntry);
+      citable[this] = new CitableModel(bentry);
     }
     return citable[this];
   }
